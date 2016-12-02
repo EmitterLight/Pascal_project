@@ -1,0 +1,203 @@
+object Form1: TForm1
+  Left = 513
+  Height = 209
+  Top = 279
+  Width = 339
+  BorderStyle = bsSingle
+  Caption = 'Напоминальщик'
+  ClientHeight = 209
+  ClientWidth = 339
+  FormStyle = fsSystemStayOnTop
+  LCLVersion = '1.6.0.4'
+  object Label1: TLabel
+    Left = 16
+    Height = 24
+    Top = 8
+    Width = 305
+    AutoSize = False
+    Caption = 'Текущая дата:'
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 24
+    Top = 32
+    Width = 305
+    AutoSize = False
+    Caption = 'Текущее время:'
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 16
+    Height = 15
+    Top = 64
+    Width = 80
+    Caption = 'Кол-во часов:'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 120
+    Height = 15
+    Top = 64
+    Width = 82
+    Caption = 'Кол-во минут:'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 224
+    Height = 15
+    Top = 64
+    Width = 87
+    Caption = 'Кол-во секунд:'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 16
+    Height = 15
+    Top = 128
+    Width = 200
+    AutoSize = False
+    Caption = 'Таймер сработает в:'
+    Font.Height = -13
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 16
+    Height = 15
+    Top = 168
+    Width = 200
+    AutoSize = False
+    Caption = 'Осталось:'
+    Font.Height = -13
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object SetBtn: TButton
+    Left = 221
+    Height = 35
+    Top = 120
+    Width = 100
+    Caption = 'Установить'
+    Font.Style = [fsBold]
+    OnClick = SetBtnClick
+    ParentFont = False
+    TabOrder = 0
+  end
+  object ClrBtn: TButton
+    Left = 221
+    Height = 35
+    Top = 160
+    Width = 100
+    Caption = 'Сброс'
+    Font.Style = [fsBold]
+    OnClick = ClrBtnClick
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Edit1: TEdit
+    Left = 16
+    Height = 23
+    Top = 83
+    Width = 80
+    AutoSize = False
+    TabOrder = 2
+    Text = '0'
+  end
+  object Edit2: TEdit
+    Left = 120
+    Height = 23
+    Top = 83
+    Width = 80
+    AutoSize = False
+    TabOrder = 3
+    Text = '0'
+  end
+  object Edit3: TEdit
+    Left = 224
+    Height = 23
+    Top = 83
+    Width = 80
+    AutoSize = False
+    TabOrder = 4
+    Text = '0'
+  end
+  object UpDown1: TUpDown
+    Left = 96
+    Height = 23
+    Top = 83
+    Width = 17
+    Associate = Edit1
+    Min = 0
+    Position = 0
+    TabOrder = 5
+    Wrap = False
+  end
+  object UpDown2: TUpDown
+    Left = 200
+    Height = 23
+    Top = 83
+    Width = 17
+    Associate = Edit2
+    Min = 0
+    Position = 0
+    TabOrder = 6
+    Wrap = False
+  end
+  object UpDown3: TUpDown
+    Left = 304
+    Height = 23
+    Top = 83
+    Width = 17
+    Associate = Edit3
+    Min = 0
+    Position = 0
+    TabOrder = 7
+    Wrap = False
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 128
+    top = 160
+  end
+  object Timer2: TTimer
+    Enabled = False
+    OnTimer = Timer2Timer
+    left = 176
+    top = 160
+  end
+  object playsound: Tplaysound
+    About.Description.Strings = (
+      'Plays WAVE sounds in Windows or Linux'
+    )
+    About.Title = 'PlaySound'
+    About.Height = 400
+    About.Width = 400
+    About.Font.Color = clNavy
+    About.Font.Height = -13
+    About.BackGroundColor = clCream
+    About.Version = '0.0.3'
+    About.Authorname = 'Gordon Bamber'
+    About.Organisation = 'Public Domain'
+    About.AuthorEmail = 'minesadorada@charcodelvalle.com'
+    About.ComponentName = 'PlaySound'
+    About.LicenseType = abLGPL
+    SoundFile = 'wav\holyshit.wav'
+    left = 176
+    top = 120
+  end
+end
